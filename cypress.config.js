@@ -1,11 +1,11 @@
-const { defineConfig } = require("cypress");
-const cucumber = require("cypress-cucumber-preprocessor").defalt
+const { defineConfig } = require("Cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default
 
 module.exports = defineConfig({
   e2e: {
     defaultCommandTimeout: 15000,
     baseUrl: "https://phptravels.net/",
-    specPattern: "**/*/.feature",
+    specPattern: "**/*.feature",
     setupNodeEvents(on, config) {
       on("file:preprocessor", cucumber());
     },

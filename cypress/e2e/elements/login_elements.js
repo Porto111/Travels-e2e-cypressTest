@@ -5,3 +5,4 @@ class LoginElements {
     loginSubmit = () => { return '#submitBTN' }
 
 } export default LoginElements
+

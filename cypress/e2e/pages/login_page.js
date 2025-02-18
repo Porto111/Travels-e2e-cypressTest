@@ -1,8 +1,7 @@
 /// <reference types="Cypress"/>
 import HomeElements from "../elements/home_elements"
-import HomeElements from "../elements/home_elements"
 import LoginElements from "../elements/login_elements"
-import LoginElements from "../elements/login_elements"
+
 
 const loginElements = new LoginElements
 const homeElements = new HomeElements
@@ -18,13 +17,13 @@ class LoginPage {
     }
 
     accessLoginPage() {
-        cy.contains(homeElements.acountSelector()).click()
-        cy.contains(homeElements.btnLogin()).click()
+        cy.get(homeElements.custumer()).click()
+        cy.get(homeElements.btnLogin()).click()
     }
 
     fillLoginInfo(email, password) {
-        cy.get(loginElements.inputEmail).type(email)
-        cy.get(loginElements.inputPass).type(password)
+        cy.get(loginElements.inputEmail()).type(email)
+        cy.get(loginElements.inputPass()).type(password)
     }
     submitLogin() {
         cy.get(loginElements.loginSubmit()).click()
