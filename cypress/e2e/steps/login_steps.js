@@ -20,5 +20,6 @@ When(/^clicar no botão entrar$/, () => {
 
 Then(/^tenho meu acesso "([^"]*)"$/, (mensagem) => {
     console.log(mensagem);
+    cy.contains('Dashboard')
 
 });
